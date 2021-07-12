@@ -22,32 +22,31 @@ namespace ESC_POS_USB_NET.EpsonCommands
     public int ColsExpanded { get; set; } = 24;
 
     public EscPos()
-      {
-          FontMode = new FontMode();
-          FontWidth = new FontWidth();
-          Alignment = new Alignment();
-          PaperCut = new PaperCut();
-          Drawer = new Drawer();
-          QrCode = new QrCode();
-          BarCode = new BarCode();
-          Image = new Image();
-          LineHeight = new LineHeight();
-          InitializePrint = new InitializePrint();
-      }
+    {
+        FontMode = new FontMode();
+        FontWidth = new FontWidth();
+        Alignment = new Alignment();
+        PaperCut = new PaperCut();
+        Drawer = new Drawer();
+        QrCode = new QrCode();
+        BarCode = new BarCode();
+        Image = new Image();
+        LineHeight = new LineHeight();
+        InitializePrint = new InitializePrint();
+    }
 
-      public byte[] Separator(char speratorChar= '-')
-      {
-          return FontMode.Condensed(PrinterModeState.On)
-              .AddBytes(new string(speratorChar, ColsCondensed))
-              .AddBytes(FontMode.Condensed(PrinterModeState.Off))
-              .AddCrLF();
-      }
+    public byte[] Separator(char speratorChar= '-')
+    {
+        return FontMode.Condensed(PrinterModeState.On)
+            .AddBytes(new string(speratorChar, ColsCondensed))
+            .AddBytes(FontMode.Condensed(PrinterModeState.Off))
+            .AddCrLF();
+    }
 
-      public byte[] AutoTest()
-      {
-          return new byte[] { 29, 40, 65, 2, 0, 0, 2 };
-      }
-
+    public byte[] AutoTest()
+    {
+        return new byte[] { 29, 40, 65, 2, 0, 0, 2 };
+    }
   }
 }
 
