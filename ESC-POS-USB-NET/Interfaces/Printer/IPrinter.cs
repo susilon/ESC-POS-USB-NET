@@ -5,10 +5,10 @@ namespace ESC_POS_USB_NET.Interfaces.Printer
 {
     internal interface IPrinter
     {
-        int ColsNomal { get; }
-        int ColsCondensed { get; }
-        int ColsExpanded { get; }
-        void PrintDocument();
+        int ColsNomal { get; set; }
+      int ColsCondensed { get; set; }
+      int ColsExpanded { get; set; }
+      void PrintDocument();
         void Append(string value);
         void Append(byte[] value);
         void AppendWithoutLf(string value);

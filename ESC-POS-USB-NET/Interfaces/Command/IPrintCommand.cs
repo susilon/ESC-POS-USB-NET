@@ -2,9 +2,9 @@
 {
     internal interface IPrintCommand
     {
-        int ColsNomal { get; }
-        int ColsCondensed { get; }
-        int ColsExpanded { get; }
+        int ColsNomal { get; set; }
+        int ColsCondensed { get; set; }
+        int ColsExpanded { get; set; }
         IFontMode FontMode { get; set; }
         IFontWidth FontWidth { get; set; }
         IAlignment Alignment { get; set; }

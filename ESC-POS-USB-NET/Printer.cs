@@ -30,7 +30,11 @@ namespace ESC_POS_USB_NET.Printer
             {
                 return _command.ColsNomal;
             }
-        }
+            set
+            {
+              _command.ColsNomal = value;
+            }
+    }
 
         public int ColsCondensed
         {
@@ -38,7 +42,11 @@ namespace ESC_POS_USB_NET.Printer
             {
                 return _command.ColsCondensed;
             }
-        }
+            set
+            {
+              _command.ColsCondensed = value;
+            }
+    }
 
         public int ColsExpanded
         {
@@ -46,7 +54,11 @@ namespace ESC_POS_USB_NET.Printer
             {
                 return _command.ColsExpanded;
             }
-        }
+      set
+      {
+        _command.ColsExpanded = value;
+      }
+    }
 
         public void PrintDocument()
         {
